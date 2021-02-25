@@ -50,6 +50,7 @@ class SendMailController {
 
     const surveysUserAlreadyExists = await surveysUsersRepository.findOne({
       where: [{ user_id: user.id }, { value: null }],
+      relations: ["user", "survey"],
     });
 
     if (surveysUserAlreadyExists) {
