@@ -18,6 +18,6 @@ router.get("/surveys", surveyController.show);
 
 router.post("/sendMail", sendMailController.execute);
 
-router.get("/answer", answerController.execute);
+router.get("/answers/:value", answerController.execute);
 
 export { router };
